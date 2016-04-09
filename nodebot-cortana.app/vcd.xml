@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+
+  <CommandSet xml:lang="en-gb" Name="examplevcd">
+    <CommandPrefix>Robot</CommandPrefix>
+    <Example>Command the robot!</Example>
+
+    <Command Name="command">
+      <Example>dance</Example>
+      <ListenFor>{command}</ListenFor>
+      <Feedback>Commanding...</Feedback>
+      <Navigate Target="sendCommand"/>
+    </Command>
+
+    <PhraseList Label="command">
+      <Item>dance</Item>
+      <Item>speak</Item>
+      <Item>forward</Item>
+      <Item>backward</Item>
+      <Item>left</Item>
+      <Item>right</Item>
+      <Item>stop</Item>
+    </PhraseList>
+
+  </CommandSet>
+
+</VoiceCommands>
