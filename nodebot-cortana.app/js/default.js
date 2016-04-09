@@ -24,7 +24,7 @@
 
         if (args.detail.kind === activation.ActivationKind.launch) {
             console.log("if: click launch");
-            //WinJS.xhr({ url: 'http://commandmonkeyapi.azurewebsites.net/api/command?cmd=clickLaunch' });
+            //WinJS.xhr({ url: 'http://commandrobot.azurewebsites.net/api/command?cmd=clickLaunch' });
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
                 // TODO: This application has been newly launched. Initialize your application here.
             } else {
@@ -36,7 +36,7 @@
         else if (args.detail.kind === activation.ActivationKind.voiceCommand) {
             console.log("else if: voice command launch");
             var command = args.detail.result.semanticInterpretation.properties.command[0];
-            WinJS.xhr({ url: 'http://commandmonkeyapi.azurewebsites.net/api/command?cmd=' + command }); // + command 
+            WinJS.xhr({ url: 'http://commandrobot.azurewebsites.net/api/command?cmd=' + command }); // + command 
         }
     };
 

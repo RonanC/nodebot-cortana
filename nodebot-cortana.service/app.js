@@ -6,7 +6,7 @@ var targetSocket;
 app.set('port', process.env.PORT);
 app.get('/api/command', function (req, res) {
     if (targetSocket) targetSocket.emit('command', req.query.cmd);
-    // query: http://commandrobotapi.azurewebsites.net/api/command?cmd=dance
+    // query: http://commandrobot.azurewebsites.net/api/command?cmd=dance
 });
 
 module.exports = app;
